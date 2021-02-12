@@ -21,7 +21,7 @@
         const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
         const loader = new THREE.GLTFLoader();
         
-        const light = new THREE.AmbientLight(0xFFFFFF, 11);
+        const light = new THREE.AmbientLight(0xFFFFFF, 4);
     scene.add(light);
     
 
@@ -42,7 +42,7 @@ loader.load( 'brain/scene.gltf', function ( gltf ) {
         const controls = new THREE.OrbitControls( camera, renderer.domElement );
         controls.update();
 
-camera.position.z = 1;
+camera.position.z = 400;
 function animate() {
     requestAnimationFrame( animate );
     controls.update();
